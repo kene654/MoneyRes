@@ -20,7 +20,14 @@ jobs:
         with:
           distribution: temurin
           java-version: "21"
-      - uses: android-actions/setup-android@v3
+      - name: Install the Android 36 SDK
+        run: |
+          SDK=/usr/local/lib/android/sdk
+          echo "ANDROID_HOME=$SDK" >> "$GITHUB_ENV"
+          echo "ANDROID_SDK_ROOT=$SDK" >> "$GITHUB_ENV"
+          SM=$(find "$SDK/cmdline-tools" -type f -name sdkmanager | head -1)
+          yes | "$SM" --licenses >/dev/null || true
+          "$SM" "platforms;android-36" "build-tools;36.0.0"
       - run: npm ci
       - run: npm test
       - run: npm run build
