@@ -1,6 +1,6 @@
 {
-  "name": "Artha",
-  "short_name": "Artha",
+  "name": "MoneyRes",
+  "short_name": "MoneyRes",
   "description": "A personal desk for loans, cards, dues, and goals.",
   "start_url": "./",
   "display": "standalone",

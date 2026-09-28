@@ -151,7 +151,7 @@ export function logout() {
 }
 
 export async function openDemo(): Promise<Result> {
-  const email = 'meera@artha.app';
+  const email = 'meera@moneyres.app';
   const existing = db.users.find((item) => item.email === email);
   if (existing) {
     sessionUserId = existing.id;

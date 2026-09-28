@@ -154,7 +154,7 @@ export function LoanFormPage() {
               suggestedEmi
                 ? `A full EMI on these numbers would be about ${formatINR(suggestedEmi)}.`
                 : isCard
-                  ? 'What you usually send. Artha uses it to judge an extra payment.'
+                  ? 'What you usually send. MoneyRes uses it to judge an extra payment.'
                   : 'Leave this blank if you only know the end date.'
             }
           >

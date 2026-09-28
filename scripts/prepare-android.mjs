@@ -1,8 +1,9 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 
+const version = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8')).version;
 const gradlePath = new URL('../android/app/build.gradle', import.meta.url);
 const source = readFileSync(gradlePath, 'utf8');
-let next = source.replace(/versionName "1\.0"/, 'versionName "0.1.0"');
+let next = source.replace(/versionName "[^"]+"/, `versionName "${version}"`);
 if (!next.includes('signingConfig signingConfigs.debug')) {
   next = next.replace(
     /release \{\n/,
@@ -10,4 +11,4 @@ if (!next.includes('signingConfig signingConfigs.debug')) {
   );
 }
 writeFileSync(gradlePath, next);
-console.log('Android release set to 0.1.0 and signed for sideload.');
+console.log(`Android release set to ${version} and signed for sideload.`);

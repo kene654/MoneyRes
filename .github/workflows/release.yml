@@ -39,12 +39,12 @@ jobs:
         run: chmod +x gradlew && ./gradlew assembleRelease
       - uses: softprops/action-gh-release@v2
         with:
-          name: Artha ${{ github.ref_name }}
+          name: MoneyRes ${{ github.ref_name }}
           files: android/app/build/outputs/apk/release/app-release.apk
           generate_release_notes: true
           body: |
-            Sideload build of the Artha loan desk.
+            Sideload build of the MoneyRes loan desk.
 
-            The web desk is at https://kene654.github.io/artha/
+            The web desk is at https://kene654.github.io/MoneyRes/
 
-            Install `app-release.apk` on an Android phone that allows installs from this source. This v0.1 package is signed for sideload, not for the Play Store.
+            Install `app-release.apk` on an Android phone that allows installs from this source. This package is signed for sideload, not for the Play Store.

@@ -2,8 +2,8 @@
 
 import type { LedgerDb } from '../domain/types';
 
-const DB_KEY = 'artha.db.v1';
-const SESSION_KEY = 'artha.session.v1';
+const DB_KEY = 'moneyres.db.v1';
+const SESSION_KEY = 'moneyres.session.v1';
 
 export function emptyDb(): LedgerDb {
   return {

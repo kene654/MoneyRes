@@ -154,7 +154,7 @@ describe('sample desk', () => {
     const demo = buildDemo({
       userId: 'user_demo',
       name: 'Meera Shah',
-      email: 'meera@artha.app',
+      email: 'meera@moneyres.app',
       passwordHash: 'x',
       passwordSalt: 'y',
       today,

@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'app.artha.desk',
-  appName: 'Artha',
+  appId: 'app.moneyres.desk',
+  appName: 'MoneyRes',
   webDir: 'dist',
 };
 

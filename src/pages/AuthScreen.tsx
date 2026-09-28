@@ -54,7 +54,7 @@ function AuthScreen({ mode }: { mode: 'login' | 'signup' }) {
       <section className="auth-story">
         <p className="brand">
           <span className="brand-mark" aria-hidden="true" />
-          Artha
+          MoneyRes
         </p>
         <h1>Know which rupee to send today.</h1>
         <p className="lede">
@@ -70,7 +70,7 @@ function AuthScreen({ mode }: { mode: 'login' | 'signup' }) {
       <section className="auth-panel">
         <p className="mobile-brand brand">
           <span className="brand-mark" aria-hidden="true" />
-          Artha
+          MoneyRes
         </p>
         <form onSubmit={onSubmit} className="stack">
           <header>

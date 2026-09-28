@@ -24,7 +24,7 @@ export function DashboardPage() {
         title={first ? `${first}'s desk` : 'Your desk'}
         lede={
           model.activeCount === 0
-            ? 'Add the loan that costs you the most. Artha will tell you when an extra payment is worth it.'
+            ? 'Add the loan that costs you the most. MoneyRes will tell you when an extra payment is worth it.'
             : `${model.activeCount} open ${model.activeCount === 1 ? 'balance' : 'balances'}.`
         }
       >
@@ -101,7 +101,7 @@ export function DashboardPage() {
                 </div>
                 <Link className="btn btn-primary" to="/loans/new">Add a loan</Link>
               </div>
-              <p className="suggest-lead">Add a loan and Artha will compare an extra ₹5,000 across all of them.</p>
+              <p className="suggest-lead">Add a loan and MoneyRes will compare an extra ₹5,000 across all of them.</p>
             </>
           )}
         </article>

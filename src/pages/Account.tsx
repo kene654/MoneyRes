@@ -56,7 +56,7 @@ export function AccountPage() {
           <h2>Saved in this browser</h2>
           <ul className="device-points">
             <li>Your desk stays on this device until you sign out.</li>
-            <li>Add Artha to your home screen to open it like an app.</li>
+            <li>Add MoneyRes to your home screen to open it like an app.</li>
             <li>The same ledger can move to an iPhone or Android app later.</li>
           </ul>
         </div>

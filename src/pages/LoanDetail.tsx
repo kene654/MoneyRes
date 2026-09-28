@@ -257,7 +257,7 @@ export function LoanDetailPage() {
                 <p className="kicker">How to read a payment</p>
                 <p>
                   Interest since the last update is taken first. Anything above the regular {formatINR(monthly)} reduces
-                  the balance faster, and Artha counts the interest that slice will no longer cost you.
+                  the balance faster, and MoneyRes counts the interest that slice will no longer cost you.
                 </p>
               </section>
             )}

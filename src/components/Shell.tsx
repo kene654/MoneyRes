@@ -16,7 +16,7 @@ export function Shell() {
       <aside className="sidebar">
         <NavLink to="/" className="brand" end>
           <span className="brand-mark" aria-hidden="true" />
-          Artha
+          MoneyRes
         </NavLink>
         <nav className="nav" aria-label="Primary">
           {links.map((link) => (

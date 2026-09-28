@@ -46,13 +46,13 @@ export function OnboardingPage() {
       <div className="onboard-card">
         <p className="brand">
           <span className="brand-mark" aria-hidden="true" />
-          Artha
+          MoneyRes
         </p>
         <p className="kicker">Step {step} of 2</p>
         {step === 1 ? (
           <>
             <h1>How does money arrive?</h1>
-            <p className="lede">This sets the income Artha compares with your EMIs. You can change it later.</p>
+            <p className="lede">This sets the income MoneyRes compares with your EMIs. You can change it later.</p>
             <div className="choice-grid">
               <button type="button" className={`choice${type === 'employed' ? ' selected' : ''}`} onClick={() => setType('employed')}>
                 <strong>Employed</strong>
@@ -72,7 +72,7 @@ export function OnboardingPage() {
             <h1>{type === 'employed' ? 'Your salary' : 'A typical month'}</h1>
             <p className="lede">
               {type === 'employed'
-                ? 'Artha uses this to show how much of your pay the loans take.'
+                ? 'MoneyRes uses this to show how much of your pay the loans take.'
                 : 'Use a normal month, not your best one. You can correct it any time.'}
             </p>
             {error ? <ErrorNote>{error}</ErrorNote> : null}
