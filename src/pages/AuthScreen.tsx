@@ -68,6 +68,7 @@ function AuthScreen({ mode }: { mode: 'login' | 'signup' }) {
         </ul>
       </section>
       <section className="auth-panel">
+        <div className="auth-card">
         <p className="mobile-brand brand">
           <span className="brand-mark" aria-hidden="true" />
           MoneyRes
@@ -133,6 +134,7 @@ function AuthScreen({ mode }: { mode: 'login' | 'signup' }) {
           </p>
           <p className="fine">The sample desk signs you in as Meera. Password demo1234 if you return later.</p>
         </form>
+        </div>
       </section>
     </div>
   );
