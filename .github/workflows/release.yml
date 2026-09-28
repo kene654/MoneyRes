@@ -1,0 +1,43 @@
+name: Release APK
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: android-actions/setup-android@v3
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+      - run: npx cap add android
+      - run: npx cap sync android
+      - run: node scripts/prepare-android.mjs
+      - name: Build APK
+        working-directory: android
+        run: chmod +x gradlew && ./gradlew assembleRelease
+      - uses: softprops/action-gh-release@v2
+        with:
+          name: Artha ${{ github.ref_name }}
+          files: android/app/build/outputs/apk/release/app-release.apk
+          generate_release_notes: true
+          body: |
+            Sideload build of the Artha loan desk.
+
+            The web desk is at https://kene654.github.io/artha/
+
+            Install `app-release.apk` on an Android phone that allows installs from this source. This v0.1 package is signed for sideload, not for the Play Store.

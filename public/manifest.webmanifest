@@ -1,0 +1,17 @@
+{
+  "name": "Artha",
+  "short_name": "Artha",
+  "description": "A personal desk for loans, cards, dues, and goals.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#050607",
+  "theme_color": "#050607",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
